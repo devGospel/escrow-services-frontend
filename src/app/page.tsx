@@ -36,6 +36,9 @@ export default function LandingPage() {
   const handleGetStarted = () => {
     router.push('/signup');
   };
+  const handleLogin = () => {
+    router.push('/login');
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 relative overflow-hidden">
@@ -114,8 +117,10 @@ export default function LandingPage() {
               >
                 <FaExchangeAlt className="mr-2" /> Start a Transaction
               </button>
-              <button className="border border-blue-300 bg-white text-blue-700 px-8 py-3 rounded-lg font-medium shadow-sm hover:bg-blue-50 transition flex items-center justify-center">
-                Learn More
+              <button 
+               onClick={handleLogin}
+              className="border border-blue-300 bg-white text-blue-700 px-8 py-3 rounded-lg font-medium shadow-sm hover:bg-blue-50 transition flex items-center justify-center">
+                Login
               </button>
             </motion.div>
           </div>
